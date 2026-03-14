@@ -6,61 +6,61 @@
     <title>Studio Webcraft — Website Design for Growing Businesses</title>
     <meta name="description" content="Strategic website design that turns visitors into customers. Built for performance, designed for results.">
     
-    <!-- Preload fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
     
     <style>
-        /* Design System — 8px Grid, 4px Base Unit */
+        /* Retro Color Palette - Warm, muted, vintage-inspired */
         :root {
-            /* Colors — High Contrast, Minimal Palette */
-            --color-bg: #fafafa;
-            --color-surface: #ffffff;
-            --color-surface-elevated: #ffffff;
-            --color-text: #0a0a0a;
-            --color-text-secondary: #525252;
-            --color-text-muted: #737373;
-            --color-border: #e5e5e5;
-            --color-border-strong: #d4d4d4;
-            --color-accent: #171717;
-            --color-accent-hover: #262626;
+            /* Retro Background Colors - Warm cream/beige base */
+            --color-bg: #f5f1e8;           /* Warm cream - main background */
+            --color-bg-warm: #ebe5d5;      /* Slightly darker cream - sections */
+            --color-bg-muted: #e5dcc8;     /* Muted beige - cards/elevated */
             
-            /* Typography — Space Grotesk for display, Inter for body */
+            /* Retro Accent Colors - Mustard, terracotta, olive */
+            --color-accent: #c17817;       /* Mustard/ochre - primary accent */
+            --color-accent-hover: #a66815; /* Darker mustard - hover states */
+            --color-terracotta: #b85c38;   /* Terracotta - secondary accent */
+            --color-olive: #6b7c3e;        /* Olive green - tertiary accent */
+            --color-navy: #2c3e50;         /* Retro navy - dark sections */
+            
+            /* Text Colors - Warm darks */
+            --color-text: #2d2926;         /* Warm near-black */
+            --color-text-secondary: #5c554d; /* Warm gray-brown */
+            --color-text-muted: #8b8378;   /* Muted warm gray */
+            
+            /* Border/Divider Colors */
+            --color-border: #d4ccc0;       /* Warm border */
+            --color-border-strong: #c4bbb0; /* Stronger border */
+            
+            /* Typography */
             --font-display: 'Space Grotesk', sans-serif;
             --font-body: 'Inter', sans-serif;
             
-            /* Spacing — 4px base, 8px grid */
-            --space-1: 0.25rem;   /* 4px */
-            --space-2: 0.5rem;    /* 8px */
-            --space-3: 0.75rem;   /* 12px */
-            --space-4: 1rem;      /* 16px */
-            --space-5: 1.25rem;   /* 20px */
-            --space-6: 1.5rem;    /* 24px */
-            --space-8: 2rem;      /* 32px */
-            --space-10: 2.5rem;   /* 40px */
-            --space-12: 3rem;     /* 48px */
-            --space-16: 4rem;     /* 64px */
-            --space-20: 5rem;     /* 80px */
-            --space-24: 6rem;     /* 96px */
-            --space-32: 8rem;     /* 128px */
+            /* Spacing */
+            --space-1: 0.25rem;
+            --space-2: 0.5rem;
+            --space-3: 0.75rem;
+            --space-4: 1rem;
+            --space-5: 1.25rem;
+            --space-6: 1.5rem;
+            --space-8: 2rem;
+            --space-10: 2.5rem;
+            --space-12: 3rem;
+            --space-16: 4rem;
+            --space-20: 5rem;
+            --space-24: 6rem;
+            --space-32: 8rem;
             
-            /* Layout */
             --max-width: 1200px;
             --container-padding: var(--space-6);
             
-            /* Transitions — Subtle, intentional */
             --transition-fast: 150ms ease;
             --transition-base: 250ms ease;
-            --transition-slow: 350ms ease;
         }
         
-        /* Reset — Aggressive but sensible */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         
         html {
             font-size: 16px;
@@ -77,18 +77,10 @@
             background: var(--color-bg);
         }
         
-        img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
         
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-        
-        /* Typography Scale — Deliberate, hierarchical */
+        /* Typography */
         .text-display {
             font-family: var(--font-display);
             font-size: clamp(2.5rem, 5vw, 4rem);
@@ -134,26 +126,21 @@
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--color-text-muted);
+            letter-spacing: 0.08em;
+            color: var(--color-terracotta);
         }
         
-        /* Layout — Container system */
+        /* Layout */
         .container {
             max-width: var(--max-width);
             margin: 0 auto;
             padding: 0 var(--container-padding);
         }
         
-        .section {
-            padding: var(--space-24) 0;
-        }
+        .section { padding: var(--space-24) 0; }
+        .section-sm { padding: var(--space-16) 0; }
         
-        .section-sm {
-            padding: var(--space-16) 0;
-        }
-        
-        /* Components — Buttons */
+        /* Buttons - Retro Style */
         .btn {
             display: inline-flex;
             align-items: center;
@@ -163,21 +150,23 @@
             font-size: 0.9375rem;
             font-weight: 500;
             line-height: 1.5;
-            border-radius: 0;
-            border: 1px solid transparent;
+            border-radius: 4px;
+            border: 2px solid transparent;
             cursor: pointer;
             transition: all var(--transition-base);
         }
         
         .btn-primary {
             background: var(--color-accent);
-            color: var(--color-surface);
+            color: white;
             border-color: var(--color-accent);
         }
         
         .btn-primary:hover {
             background: var(--color-accent-hover);
             border-color: var(--color-accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(193, 120, 23, 0.3);
         }
         
         .btn-secondary {
@@ -187,31 +176,35 @@
         }
         
         .btn-secondary:hover {
-            border-color: var(--color-text);
+            border-color: var(--color-accent);
+            color: var(--color-accent);
         }
         
-        /* Components — Cards */
+        /* Cards - Retro Style */
         .card {
-            background: var(--color-surface);
-            border: 1px solid var(--color-border);
+            background: var(--color-bg-muted);
+            border: 2px solid var(--color-border);
             padding: var(--space-8);
-            transition: border-color var(--transition-base);
+            border-radius: 8px;
+            transition: all var(--transition-base);
         }
         
         .card:hover {
-            border-color: var(--color-border-strong);
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(193, 120, 23, 0.15);
         }
         
-        /* Header — Fixed, minimal */
+        /* Header */
         .header {
             position: fixed;
             top: 0;
             left: 0;
             right: 0;
             z-index: 100;
-            background: rgba(250, 250, 250, 0.95);
+            background: rgba(245, 241, 232, 0.95);
             backdrop-filter: blur(8px);
-            border-bottom: 1px solid var(--color-border);
+            border-bottom: 2px solid var(--color-border);
         }
         
         .header-inner {
@@ -226,6 +219,7 @@
             font-size: 1.25rem;
             font-weight: 700;
             letter-spacing: -0.01em;
+            color: var(--color-text);
         }
         
         .nav {
@@ -241,11 +235,9 @@
             transition: color var(--transition-fast);
         }
         
-        .nav-link:hover {
-            color: var(--color-text);
-        }
+        .nav-link:hover { color: var(--color-accent); }
         
-        /* Hero — Bold, confident */
+        /* Hero */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -253,19 +245,22 @@
             justify-content: center;
             padding-top: 72px;
             padding-bottom: var(--space-16);
+            background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-warm) 100%);
         }
         
-        .hero-content {
-            max-width: 800px;
-        }
+        .hero-content { max-width: 800px; }
         
         .hero-label {
             display: inline-block;
             margin-bottom: var(--space-6);
+            padding: var(--space-2) var(--space-4);
+            background: rgba(193, 120, 23, 0.1);
+            border-radius: 4px;
         }
         
         .hero-title {
             margin-bottom: var(--space-6);
+            color: var(--color-text);
         }
         
         .hero-description {
@@ -273,15 +268,13 @@
             margin-bottom: var(--space-8);
         }
         
-        .hero-actions {
-            display: flex;
-            gap: var(--space-4);
-        }
+        .hero-actions { display: flex; gap: var(--space-4); }
         
-        /* Stats — Clean, factual */
+        /* Stats */
         .stats {
-            border-top: 1px solid var(--color-border);
-            border-bottom: 1px solid var(--color-border);
+            background: var(--color-bg-warm);
+            border-top: 2px solid var(--color-border);
+            border-bottom: 2px solid var(--color-border);
             padding: var(--space-12) 0;
         }
         
@@ -291,9 +284,7 @@
             gap: var(--space-8);
         }
         
-        .stat-item {
-            text-align: center;
-        }
+        .stat-item { text-align: center; }
         
         .stat-number {
             font-family: var(--font-display);
@@ -301,43 +292,42 @@
             font-weight: 700;
             line-height: 1;
             margin-bottom: var(--space-2);
+            color: var(--color-accent);
         }
         
         .stat-label {
             font-size: 0.875rem;
             color: var(--color-text-muted);
+            font-weight: 500;
         }
         
-        /* Services — Structured, clear */
+        /* Services */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--space-6);
         }
         
-        .service-card {
-            padding: var(--space-8);
-        }
+        .service-card { padding: var(--space-8); }
         
         .service-icon {
-            width: 48px;
-            height: 48px;
-            background: var(--color-bg);
-            border: 1px solid var(--color-border);
+            width: 56px;
+            height: 56px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-bottom: var(--space-6);
             font-family: var(--font-display);
             font-size: 1.25rem;
-            font-weight: 600;
+            font-weight: 700;
         }
         
-        .service-title {
-            margin-bottom: var(--space-3);
-        }
+        .service-title { margin-bottom: var(--space-3); }
         
-        /* Work — Gallery style */
+        /* Work */
         .work-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
@@ -347,9 +337,17 @@
         .work-item {
             position: relative;
             aspect-ratio: 16 / 10;
-            background: var(--color-bg);
-            border: 1px solid var(--color-border);
+            background: var(--color-bg-muted);
+            border: 2px solid var(--color-border);
+            border-radius: 8px;
             overflow: hidden;
+            transition: all var(--transition-base);
+        }
+        
+        .work-item:hover {
+            border-color: var(--color-accent);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(193, 120, 23, 0.2);
         }
         
         .work-placeholder {
@@ -358,7 +356,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, #f5f5f5 0%, #ebebeb 100%);
+            background: linear-gradient(135deg, var(--color-bg-warm) 0%, var(--color-bg-muted) 100%);
         }
         
         .work-placeholder span {
@@ -368,20 +366,18 @@
             color: var(--color-text-muted);
         }
         
-        .work-info {
-            padding: var(--space-6) 0;
-        }
+        .work-info { padding: var(--space-6) 0; }
         
         .work-category {
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--color-text-muted);
+            letter-spacing: 0.08em;
+            color: var(--color-accent);
             margin-bottom: var(--space-2);
         }
         
-        /* Process — Timeline style */
+        /* Process */
         .process-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -392,10 +388,10 @@
         .process-grid::before {
             content: '';
             position: absolute;
-            top: 24px;
+            top: 28px;
             left: 0;
             right: 0;
-            height: 1px;
+            height: 2px;
             background: var(--color-border);
         }
         
@@ -408,39 +404,46 @@
             position: absolute;
             top: 0;
             left: 0;
-            width: 48px;
-            height: 48px;
-            background: var(--color-surface);
-            border: 1px solid var(--color-border-strong);
+            width: 56px;
+            height: 56px;
+            background: var(--color-accent);
+            color: white;
+            border-radius: 8px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-family: var(--font-display);
-            font-size: 1rem;
-            font-weight: 600;
+            font-size: 1.125rem;
+            font-weight: 700;
+            z-index: 1;
         }
         
-        .process-title {
-            margin-bottom: var(--space-3);
-        }
+        .process-title { margin-bottom: var(--space-3); }
         
-        /* Testimonials — Editorial style */
+        /* Testimonial */
         .testimonial {
             max-width: 720px;
             margin: 0 auto;
             text-align: center;
+            padding: var(--space-12);
+            background: var(--color-bg-muted);
+            border: 2px solid var(--color-border);
+            border-radius: 8px;
         }
         
         .testimonial-quote {
             font-family: var(--font-display);
-            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
             font-weight: 500;
-            line-height: 1.4;
+            line-height: 1.5;
             margin-bottom: var(--space-8);
+            color: var(--color-text);
+            font-style: italic;
         }
         
         .testimonial-author {
             font-weight: 600;
+            color: var(--color-text);
         }
         
         .testimonial-role {
@@ -448,20 +451,15 @@
             color: var(--color-text-muted);
         }
         
-        /* Contact — Clean form */
+        /* Contact */
         .contact-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: var(--space-16);
         }
         
-        .contact-info h2 {
-            margin-bottom: var(--space-6);
-        }
-        
-        .contact-info p {
-            margin-bottom: var(--space-8);
-        }
+        .contact-info h2 { margin-bottom: var(--space-6); }
+        .contact-info p { margin-bottom: var(--space-8); }
         
         .contact-details {
             display: flex;
@@ -479,13 +477,14 @@
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
+            letter-spacing: 0.08em;
             color: var(--color-text-muted);
         }
         
         .contact-value {
             font-size: 1.125rem;
             font-weight: 500;
+            color: var(--color-text);
         }
         
         .form {
@@ -503,6 +502,7 @@
         .form-label {
             font-size: 0.875rem;
             font-weight: 500;
+            color: var(--color-text);
         }
         
         .form-input,
@@ -510,15 +510,17 @@
             padding: var(--space-3) var(--space-4);
             font-family: var(--font-body);
             font-size: 1rem;
-            border: 1px solid var(--color-border);
-            background: var(--color-surface);
-            transition: border-color var(--transition-fast);
+            border: 2px solid var(--color-border);
+            background: var(--color-bg-muted);
+            border-radius: 4px;
+            transition: all var(--transition-fast);
         }
         
         .form-input:focus,
         .form-textarea:focus {
             outline: none;
-            border-color: var(--color-border-strong);
+            border-color: var(--color-accent);
+            background: var(--color-bg);
         }
         
         .form-textarea {
@@ -526,9 +528,10 @@
             resize: vertical;
         }
         
-        /* Footer — Proper, complete */
+        /* Footer */
         .footer {
-            border-top: 1px solid var(--color-border);
+            background: var(--color-navy);
+            color: rgba(255, 255, 255, 0.7);
             padding: var(--space-12) 0;
         }
         
@@ -539,17 +542,22 @@
             margin-bottom: var(--space-12);
         }
         
+        .footer-brand .logo {
+            color: white;
+            margin-bottom: var(--space-4);
+        }
+        
         .footer-brand p {
             max-width: 280px;
-            margin-top: var(--space-4);
+            color: rgba(255, 255, 255, 0.6);
         }
         
         .footer-title {
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--color-text-muted);
+            letter-spacing: 0.08em;
+            color: rgba(255, 255, 255, 0.5);
             margin-bottom: var(--space-4);
         }
         
@@ -561,28 +569,26 @@
         
         .footer-link {
             font-size: 0.9375rem;
-            color: var(--color-text-secondary);
+            color: rgba(255, 255, 255, 0.7);
             transition: color var(--transition-fast);
         }
         
-        .footer-link:hover {
-            color: var(--color-text);
-        }
+        .footer-link:hover { color: white; }
         
         .footer-bottom {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-top: var(--space-8);
-            border-top: 1px solid var(--color-border);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
         .footer-copyright {
             font-size: 0.875rem;
-            color: var(--color-text-muted);
+            color: rgba(255, 255, 255, 0.5);
         }
         
-        /* Section headers */
+        /* Section Headers */
         .section-header {
             max-width: 600px;
             margin-bottom: var(--space-12);
@@ -596,23 +602,10 @@
         
         /* Responsive */
         @media (max-width: 1024px) {
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .services-grid,
-            .process-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .process-grid::before {
-                display: none;
-            }
-            
-            .footer-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .services-grid, .process-grid { grid-template-columns: repeat(2, 1fr); }
+            .process-grid::before { display: none; }
+            .footer-grid { grid-template-columns: repeat(2, 1fr); }
             .contact-grid {
                 grid-template-columns: 1fr;
                 gap: var(--space-12);
@@ -620,30 +613,11 @@
         }
         
         @media (max-width: 640px) {
-            :root {
-                --container-padding: var(--space-4);
-            }
-            
-            .nav {
-                display: none;
-            }
-            
-            .hero-actions {
-                flex-direction: column;
-            }
-            
-            .stats-grid,
-            .services-grid,
-            .work-grid,
-            .process-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: var(--space-8);
-            }
-            
+            :root { --container-padding: var(--space-4); }
+            .nav { display: none; }
+            .hero-actions { flex-direction: column; }
+            .stats-grid, .services-grid, .work-grid, .process-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr; gap: var(--space-8); }
             .footer-bottom {
                 flex-direction: column;
                 gap: var(--space-4);
@@ -653,7 +627,6 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header-inner">
@@ -670,7 +643,6 @@
     </header>
 
     <main>
-        <!-- Hero -->
         <section class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -688,7 +660,6 @@
             </div>
         </section>
 
-        <!-- Stats -->
         <section class="stats">
             <div class="container">
                 <div class="stats-grid">
@@ -712,7 +683,6 @@
             </div>
         </section>
 
-        <!-- Services -->
         <section class="section" id="services">
             <div class="container">
                 <div class="section-header">
@@ -748,8 +718,7 @@
             </div>
         </section>
 
-        <!-- Work -->
-        <section class="section" id="work" style="background: var(--color-surface);">
+        <section class="section" id="work" style="background: var(--color-bg-warm);">
             <div class="container">
                 <div class="section-header section-header-centered">
                     <span class="text-label">Selected Work</span>
@@ -804,7 +773,6 @@
             </div>
         </section>
 
-        <!-- Process -->
         <section class="section" id="process">
             <div class="container">
                 <div class="section-header section-header-centered">
@@ -848,8 +816,7 @@
             </div>
         </section>
 
-        <!-- Testimonial -->
-        <section class="section-sm" style="background: var(--color-surface);">
+        <section class="section-sm" style="background: var(--color-bg-warm);">
             <div class="container">
                 <div class="testimonial">
                     <blockquote class="testimonial-quote">
@@ -863,7 +830,6 @@
             </div>
         </section>
 
-        <!-- Contact -->
         <section class="section" id="contact">
             <div class="container">
                 <div class="contact-grid">
@@ -913,7 +879,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -958,6 +923,3 @@
                 </div>
             </div>
         </div>
-    </footer>
-</body>
-</html>
